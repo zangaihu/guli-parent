@@ -43,7 +43,7 @@ public class getCode {
         dsc.setUrl("jdbc:mysql://81.69.242.207:3306/guli?serverTimezone=GMT%2B8");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("SH!@#wy");
+        dsc.setPassword("xxxx");
         dsc.setDbType(DbType.MYSQL);
         mpg.setDataSource(dsc);
 
