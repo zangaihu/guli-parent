@@ -26,10 +26,14 @@ public class EduApplication {
 
     @Bean
     MeterRegistryCustomizer meterRegistryCustomizer(MeterRegistry meterRegistry) {
-        return meterRegistry1 -> {
-            meterRegistry.config()
-                    .commonTags("application", "edu");
-        };
+        return meterRegistry1 -> meterRegistry.config()
+                .commonTags("application", "edu");
+    }
+
+
+    @Bean
+    MeterRegistryCustomizer<MeterRegistry> configurer(){
+        return registry -> registry.config().commonTags("application","edu");
     }
 
 }

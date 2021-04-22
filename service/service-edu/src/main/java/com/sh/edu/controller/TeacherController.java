@@ -1,6 +1,7 @@
 package com.sh.edu.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sh.commonutils.R;
 import com.sh.edu.entity.Teacher;
@@ -37,7 +38,8 @@ public class TeacherController {
             @ApiParam(name = "limit", value = "每页记录数", required = true)
             @PathVariable Long limit,@RequestBody Teacher teacher){
         Page<Teacher> pageParam = new Page<>(page, limit);
-        teacherService.page(pageParam, null);
+
+        teacherService.page(pageParam, new QueryWrapper<>(teacher));
         List<Teacher> records = pageParam.getRecords();
         long total = pageParam.getTotal();
         return  R.ok().data("total", total).data("rows", records);
@@ -51,10 +53,9 @@ public class TeacherController {
 
     }
 
-    @PostMapping("{id}")
+    @PostMapping("/update")
     public R update(@PathVariable Integer id,@RequestBody Teacher teacher){
-
-
+        teacherService.saveOrUpdate(teacher);
         return R.ok();
     }
 

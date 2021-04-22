@@ -2,6 +2,7 @@ package com.sh.edu.service;
 
 import com.sh.edu.entity.Teacher;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.apache.ibatis.annotations.Update;
 
 /**
  * <p>
