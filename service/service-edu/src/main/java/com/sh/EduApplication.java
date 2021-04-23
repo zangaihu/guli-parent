@@ -31,9 +31,9 @@ public class EduApplication {
     }
 
 
-    @Bean
+ /*   @Bean
     MeterRegistryCustomizer<MeterRegistry> configurer(){
         return registry -> registry.config().commonTags("application","edu");
-    }
+    }*/
 
 }
