@@ -12,3 +12,10 @@ management:
       exposure:
         include: '*'
       base-path: /metrics
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-not-delete-value: 0
+      logic-delete-value: 1

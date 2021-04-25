@@ -17,4 +17,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> implements TeacherService {
 
+    @Override
+    public Boolean removeById(String id) {
+        Integer result = baseMapper.deleteById(id);
+        return null!=result&&result >0;
+    }
 }

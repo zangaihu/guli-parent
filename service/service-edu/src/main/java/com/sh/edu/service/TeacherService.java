@@ -13,5 +13,12 @@ import org.apache.ibatis.annotations.Update;
  * @since 2021-04-20
  */
 public interface TeacherService extends IService<Teacher> {
-
+    /**
+     * 根据id删除
+     * @author sunhu
+     * @date 2021/4/25 14:00
+     * @param id
+     * @return java.lang.Boolean
+     */
+    public Boolean removeById(String id);
 }
