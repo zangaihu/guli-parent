@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Bean;
  * @date 2021/4/20 11:12
  */
 @SpringBootApplication
+@EnableDiscoveryClient
 @ServletComponentScan
 public class EduApplication {
 
