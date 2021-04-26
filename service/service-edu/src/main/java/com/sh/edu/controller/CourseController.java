@@ -1,12 +1,16 @@
 package com.sh.edu.controller;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sh.commonutils.R;
+import com.sh.edu.entity.Course;
 import com.sh.edu.entity.CourserDTO;
 import com.sh.edu.service.CourseService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * <p>
@@ -31,6 +35,13 @@ public class CourseController {
             return R.error();
         }
         return R.ok().data("courseId",courseId);
+    }
+
+
+    @GetMapping("list")
+    public R courseList(){
+        List<Course> list = courseService.list(new QueryWrapper<>());
+        return R.ok().data("item",list);
     }
 
 }
