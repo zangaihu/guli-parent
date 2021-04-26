@@ -1,7 +1,6 @@
 package com.sh.oss.service.impl;
 
 import com.aliyun.oss.OSS;
-import com.aliyun.oss.OSSClient;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.model.CannedAccessControlList;
 import com.sh.oss.service.FileService;

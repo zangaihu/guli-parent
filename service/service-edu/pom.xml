@@ -11,6 +11,15 @@
     <packaging>jar</packaging>
     <artifactId>service-edu</artifactId>
 
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
@@ -29,6 +38,20 @@
                 </executions>
             </plugin>
         </plugins>
+
+            <resources>
+                <resource>
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                        <include>**/*.properties</include>
+                    </includes>
+                </resource>
+                <resource>
+                    <directory>src/main/resources</directory>
+                </resource>
+            </resources>
+
 
     </build>
 
