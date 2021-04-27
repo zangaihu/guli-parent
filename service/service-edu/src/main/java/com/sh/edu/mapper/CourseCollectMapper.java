@@ -2,6 +2,7 @@ package com.sh.edu.mapper;
 
 import com.sh.edu.entity.CourseCollect;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
